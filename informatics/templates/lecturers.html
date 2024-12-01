@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lecturers{% endblock %}
+
+{% block content %}
+<body class="trainers-page">
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Lecturers</h1>
+              <p class="mb-0">Our lecturers are committed to providing us with a high-quality learning experience. 
+                With a wealth of knowledge and industry experience, they are dedicated to helping us succeed. They 
+                bring a unique blend of academic expertise and practical insights to the classroom, making learning 
+                engaging and relevant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Lecturers</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="section trainers">
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/avatar.jpeg' %}" class="img-fluid" alt="Ephraim">
+              <div class="social">
+                <!-- <a href="#"><i class="bi bi-twitter-x"></i></a> -->
+                <!-- <a href="#"><i class="bi bi-facebook"></i></a> -->
+                <a href="https://wa.me/+254786732275"><i class="bi bi-whatsapp"></i></a>
+                <!-- <a href="#"><i class="bi bi-envelope"></i></a> -->
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Mr. Ephraim Ochieng</h4>
+              <span>Ethics, Integrity And Social Responsibility</span>
+              <p>He delves into the ethical implications of technology and its impact on society. He explores topics such 
+                as data privacy, cybersecurity, intellectual propety rights, and digital citizenship.
+              </p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/Ms. Tabitha.png' %}" class="img-fluid" alt="tabitha">
+              <div class="social">
+                <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+                <a href="https://wa.me/+254705549316"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:tabithanyongesa@rongovarsity.ac.ke"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Ms. Tabitha Nyongesa</h4>
+              <span>Green Computing</span>
+              <p>Ms. Tabitha will explore with you how to minimize the environmental impact of computers and related devices 
+                throughout their lifecycles. 
+              </p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/Mr. Steve Oloo.jfif' %}" class="img-fluid" alt="Steve">
+              <div class="social">
+                <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+                <a href="https://wa.me/+254726859926"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:soloo@rongovarsity.ac.ke"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Dr. Steve Oloo</h4>
+              <span>Operating Systems II</span>
+              <p>Dr. Steve will delve into the intricate workings of the software that manages computer hardware and software 
+                resources.
+              </p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/avatar.jpeg' %}" class="img-fluid" alt="avatar">
+              <div class="social">
+                <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+                <a href="https://wa.me/+254721652832"><i class="bi bi-whatsapp"></i></a>
+                <!-- <a href="#"><i class="bi bi-envelope"></i></a> -->
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Mr. Francis Onyango</h4>
+              <span>Business Intelligence</span>
+              <p>He will delve into the power of BI, covering topics such as data warehousing, data mining and business analytics.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/Mr. Limo.jpg' %}" class="img-fluid" alt="Limo">
+              <div class="social">
+                <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+                <a href="https://wa.me/+254728951220"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:tlimoworks@gmail.com"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Mr. Limo Towett</h4>
+              <span>Computer Networks &<br>Programming For The Internet And Mobile Devices II</span>
+              <p>Mr. Limo will cover the fundamental principles of network communication, exploring topics such as 
+                networking protocols, network topologies, and network security. He'll also teach on developing web applications 
+                and mobile apps using languages like HTML, CSS, JavaScript and potentially others.
+              </p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/Dr. James Abila.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+                <a href="https://wa.me/+254723920639"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:abisonj@rongovarsity.ac.ke"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Dr. James Abila</h4>
+              <span>Fundamentals Of Software Engineering</span>
+              <p>Dr. Abila will provide a comprehensive introduction to the principles and practices of software development.
+              </p>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Trainers Section -->
+
+  </main>
+
+  {% endblock %}

@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+{% block content %}
+
+<body class="about-page">
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>About Us<br></h1>
+              <p class="mb-0">As informatics students, we embark on an exciting journey into the world of 
+                technology. Through hands-on projects, interactive exercises, and engaging lectures, we develop 
+                critical thinking, problem-solving, and creative skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">About Us<br></li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- About Us Section -->
+    <section id="about-us" class="section about-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets/img/about-2.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <!-- <h3>Course Objectives</h3> -->
+            <p class="fst-italic">
+              We explore a wide range of topics, including programming, data analysis, web development, and cybersecurity.
+              This course is designed to enable us to understand and harness the power of digital tools. By the end of this 
+              course, we'll be well-equipped to pursue a career in technology or apply our skills to various fields.
+            </p>
+            <h3>Course Objectives</h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Learn to design, develop, and test software applications.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Explore the principles of data structures and algorithms.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Understand the fundamentals of networking and cybersecurity.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Develop effective problem-solving and critical thinking skills.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Collaborate with peers and work effecively in teams.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Develop proficiency in programming languages like Python, Java or C++.</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Us Section -->
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Courses</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Events</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Lecturers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What the students are saying</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/Ken.jpg' %}" class="testimonial-img" alt="ken">
+                  <h3>Excels Kennedy</h3>
+                  <h4>Student &amp; Class Representative</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>This course has been a game-changer for me. I never knew anything about computers and tech, but 
+                      throught the engaging lectures, hands-on projects, and supportive learning environment, I gained a 
+                      solid understanding of programming concepts, data analysis, and web development.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/Clifford.jpg' %}" class="testimonial-img" alt="Clifford">
+                  <h3>Clifford Onchomba</h3>
+                  <h4>Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>I am currently pursuing a degree in Bachelor of Science in Informatics. The course has
+                      been a great learning experience so far, helping me understand how technology, computer
+                      programming, information systems etc. work and how they can be integrated to help humanity.
+                      My coursemates have been supportive and hardworking, and we often help each other with
+                      projects and brainstorming ideas. The course has given me useful skills for the future,
+                      and I'm excited to keep learning and growing in this field of machine learning and deep
+                      learning.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/Moses.jpg' %}" class="testimonial-img" alt="moses">
+                  <h3>Moses Wekesa</h3>
+                  <h4>Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>As a third year student at Rongo University pursuing a Bachelor's in Informatics, I can
+                      confidently say that
+                      this program has been transformative for my academic and professional growth. The curriculum is
+                      well-structured,
+                      combining theoretical knowledge with practical skills that are vital in today's tech-driven world.
+                      The hands-on
+                      projects and collaborative environment have not only deepened my undersatanding of informatics but
+                      also fostered
+                      valuable teamwork and problem-solving skills. The support from faculty and the resources available
+                      have truly
+                      enhanced my learning experience. I feel well-prepared for a successful career in this dynamic
+                      field!
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/John.jpg' %}" class="testimonial-img" alt="john">
+                  <h3>John Lang'at</h3>
+                  <h4>Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>I recommend informatics course since it equips student with Golden knowledge of programming,
+                      data management, data
+                      analysis and human-computer interaction. The course bridges the gap between people and technology,
+                      focusing on data organization
+                      and application across fields like healthcare and business. Students gain practical skills to
+                      solve real-world
+                      problems with computational tools.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/Martin.jpg' %}" class="testimonial-img" alt="Martin">
+                  <h3>Martin Anyour</h3>
+                  <h4>Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>I have taken several classes in this course with different lecturers and they have
+                       consistently delivered exceptional instructions. Their passion for the units they teach is transmissible and they have
+                      created a positive and supportive learning environment. I am really grateful for the opportunity to learn
+                      from such a knowledgeable and aspiring lecturers they have given us. They have made the class to always be
+                      engaging and informative hence <Inp></Inp> highly recommend.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+
+{% endblock %}
