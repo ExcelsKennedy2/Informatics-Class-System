@@ -16,6 +16,7 @@ class Semester(models.Model):
     Model representing a semester (e.g., Fall 2024, Spring 2025).
     """
     name = models.CharField(max_length=255, unique=True)
+    courses = models.ManyToManyField(Course, blank=True)  # ManyToMany relationship with Course
 
     def __str__(self):
         return self.name
