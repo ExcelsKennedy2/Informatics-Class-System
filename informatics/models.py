@@ -21,6 +21,10 @@ class Semester(models.Model):
     def __str__(self):
         return self.name
 
+class ContentManager(models.Manager):
+    def get_all_for_course(self, course_name):
+        return self.filter(course__name=course_name)
+
 class Content(models.Model):
     """
     Model representing different types of content (notes, CATs, assignments).
@@ -36,6 +40,7 @@ class Content(models.Model):
     title = models.CharField(max_length=255)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    objects = ContentManager()
 
     class Meta:
         abstract = True
