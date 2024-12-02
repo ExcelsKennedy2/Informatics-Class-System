@@ -43,7 +43,7 @@ class DocumentContent(Content):
     """
     Model for content uploaded as documents.
     """
-    file = models.FileField(upload_to='uploads/')
+    file = models.FileField(upload_to='documents/')
 
     def __str__(self):
         return f"{self.title} ({self.content_type})"

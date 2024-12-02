@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Content
 
 # Create your views here.
 def base(request):
@@ -23,25 +24,46 @@ def dashboard(request):
     return render(request, 'dashboard.html')
 
 def businessIntelligence(request):
-    return render(request, 'business-intelligence.html')
+    course_name = "Business Intelligence"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'business-intelligence.html', context)
 
 def computerNetworks(request):
-    return render(request, 'computer-networks.html')
+    course_name = "Computer Networks"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'computer-networks.html', context)
 
 def fose(request):
-    return render(request, 'fose.html')
+    course_name = "Fundamentals of Software Engineering"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'fose.html', context)
 
 def greenComputing(request):
-    return render(request, 'green-computing.html')
+    course_name = "Green Computing"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'green-computing.html', context)
 
 def operatingSystems(request):
-    return render(request, 'operating-systems.html')
+    course_name = "Operating Systems"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'operating-systems.html', context)
 
 def programming2(request):
-    return render(request, 'programming2.html')
+    course_name = "Programming For The Internet And Mobile Devices"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'programming2.html', context)
 
 def sas311(request):
-    return render(request, 'sas311.html')
+    course_name = "Ethics, Integrity And Social Responsibility"
+    contents = Content.objects.filter(course__name=course_name)
+    context = {'contents': contents}
+    return render(request, 'sas311.html', context)
 
 def pricing(request):
     return render(request, 'pricing.html')
