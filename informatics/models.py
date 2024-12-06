@@ -50,9 +50,10 @@ class DocumentContent(Content):
     Model for content uploaded as documents.
     """
     file = models.FileField(upload_to='documents/')
+    name = models.CharField(max_length=255, default='document')
 
     def __str__(self):
-        return f"{self.title} ({self.content_type})"
+        return self.name
 
 class TextContent(Content):
     """
@@ -62,3 +63,12 @@ class TextContent(Content):
 
     def __str__(self):
         return f"{self.title} ({self.content_type})"
+
+class Event(models.Model):
+    name = models.CharField(max_length=100, blank=False, null=False)
+    image = models.ImageField(upload_to='events/')
+    description = models.TextField(blank=False, null=False)
+    day = models.DateField(blank=False, null=False)
+
+    def __str__(self):
+        return self.name

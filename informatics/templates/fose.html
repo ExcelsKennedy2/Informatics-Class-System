@@ -107,13 +107,16 @@
                             <div class="tab-pane active show" id="tab-1">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <!-- <h3>Architecto ut aperiam autem id</h3> -->
-                                        <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-                                        <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
-                                        <a href="courses/Fundamentals Of Software Engineering/LECTURE 1-2_081723.docx"
-                                            class="list-group-item list-group-item-action"
-                                            download="Fundamentals of Software Engineering Lecture 1">Lecture 1 and
-                                            2</a>
+                                        {% for note in notes %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ note.title }}</h3>
+                                                {% if note.file %}
+                                                    <a href="{{ note.file.url }}" download="{{ note.name }}">{{ note.name }}</a>
+                                                {% else %}
+                                                    <p>{{ note.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
                                         <img src="{% static 'assets/img/tabs/tab-1.png' %}" alt="" class="img-fluid">
@@ -123,82 +126,16 @@
                             <div class="tab-pane" id="tab-2">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <h3>Assignment 1</h3>
-                                        <a href="courses/Fundamentals Of Software Engineering/Lecture 2 task.pdf"
-                                            class="list-group-item list-group-item-action"
-                                            download="Lecture 2 Task">Lecture 2 Task</a>
-                                        <div class="list-group-item list-group-item-action">
-                                            <h3>Assignment 2</h3>
-                                            <p class="fst-italic">For the following Software Development Models, explain
-                                                how they work, where they will be suitable and find a case study:</p>
-                                            <ol>
-                                                <li>Waterfall model - Dominic</li>
-                                                <li>Incremental model - Clifford</li>
-                                                <li>Agile: <ul>
-                                                        <li>Scrum - Martin</li>
-                                                        <li>Kanban - John</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Comparative analysis - Moses</li>
-                                                <li>Other Models - Ken</li>
-                                            </ol>
-                                            <p class="fst-italic">Due date: 17<sup>th</sup> October, 2024</p>
-                                        </div>
-
-
-                                        <div class="list-group-item list-group-item-action">
-                                            <h3>Assignment 3 (Group Work)</h3>
-                                            <h4>Project 1</h4>
-                                            <p>Create an app that enables the ministry of ICT to determine the benefits
-                                                of digital ajira. This app should the track usage of the ajira program.
-                                            </p>
-                                            <p>Group members include:
-                                            <ul>
-                                                <li>Virginia</li>
-                                                <li>Martin &</li>
-                                                <li>Clifford</li>
-                                            </ul>
-                                            </p>
-
-                                            <h4>Project 2</h4>
-                                            <p>Create an app that can measure herbicide safety use level in Migori
-                                                County.</p>
-                                            <p>Group members include:
-                                            <ul>
-                                                <li>Dominic</li>
-                                                <li>Moses</li>
-                                                <li>John</li>
-                                            </ul>
-                                            </p>
-
-                                            <h4>Project 3</h4>
-                                            <p>Develop a Rongo University ICT consultancy website.</p>
-                                            <p>The areas of consultancy include:
-                                            <ul>
-                                                <li>Web Development</li>
-                                                <li>Networking</li>
-                                                <li>App Development</li>
-                                            </ul>
-                                            </p>
-                                            <p class="fst-italic">Due date: Unspecified</p>
-                                        </div>
-
-                                        <div class="list-group-item list-group-item-action">
-                                            <h3>Assignment 4</h3>
-                                            <p>Develop a project schedule include time and resource schedule.</p>
-                                            <p class="fst-italic">Due date: 22<sup>nd</sup> October, 2024.</p>
-                                        </div>
-
-                                        <div class="list-group-item list-group-item-action">
-                                            <h3>Assignment 5</h3>
-                                            <p>Build a requirement-gathering tool to collect data from your 
-                                                fellow students. Come up with a project/software that you'll build for 
-                                            them and gather requirements from them concerning this software. We 
-                                        will use this data to build designs for the project which will guide us on how we will work on our 
-                                    group work projects (meaning the apps we have been working on in groups). The group work projects will be 
-                                submitted as a CAT. However, as for this requirement-gathering tool, we are working together as a class.</p>
-                                            <p class="fst-italic">Due date: 3<sup>rd</sup> December, 2024.</p>
-                                        </div>
+                                        {% for assignment in assignments %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ assignment.title }}</h3>
+                                                {% if assignment.file %}
+                                                    <a href="{{ assignment.file.url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
+                                                {% else %}
+                                                    <p>{{ assignment.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
                                         <img src="{% static 'assets/img/tabs/tab-2.png' %}" alt="" class="img-fluid">
@@ -208,10 +145,17 @@
                             <div class="tab-pane" id="tab-3">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <!-- <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p> -->
-                                        <p class="list-group-item list-group-item-action">No CATs yet</p>
-                                    </div>
+                                        {% for cat in cats %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ cat.title }}</h3>
+                                                {% if cat.file %}
+                                                    <a href="{{ cat.file.url }}" download="{{ cat.name }}">{{ cat.name }}</a>
+                                                {% else %}
+                                                    <p>{{ cat.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                         </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
                                         <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="" class="img-fluid">
                                     </div>
@@ -220,9 +164,6 @@
                             <div class="tab-pane" id="tab-4">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <!-- <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p> -->
                                         <a href="https://chat.whatsapp.com/IEJkTTCYXomAc5QoHnOcBG" target="_blank"
                                             class="list-group-item list-group-item-action">https://chat.whatsapp.com/IEJkTTCYXomAc5QoHnOcBG</a>
                                     </div>

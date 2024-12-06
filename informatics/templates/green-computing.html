@@ -104,92 +104,91 @@
           </div>
           <div class="col-lg-9 mt-4 mt-lg-0">
             <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                    <!-- <h3>Architecto ut aperiam autem id</h3> -->
-                    <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-                    <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
-                    <a href="courses/Green Computing/INF 311 GREEN COMPUTING COURSE OUTLINE.pdf" class="list-group-item list-group-item-action" download="Green Computing Course Outline">Course Outline</a>
-                    <a href="courses/Green Computing/Green Computing Lecture 1.pdf" class="list-group-item list-group-item-action" download="Green Computing Lecture 1">Lecture 1</a>
-                    <a href="courses/Green Computing/Green Computing Lecture 2.pdf" class="list-group-item list-group-item-action" download="Green Computing Lecture 2">Lecture 2</a>
-                    <a href="courses/Green Computing/Green Computing Lecture 3.pdf" class="list-group-item list-group-item-action" download="Green Computing Lecture 3">Lecture 3</a>
-                    <a href="courses/Green Computing/Green Computing Lecture 4.pdf" class="list-group-item list-group-item-action" download="Green Computing Lecture 4">Lecture 4</a>
-                    <a href="courses/Green Computing/Green Computing Lecture 5.pdf" class="list-group-item list-group-item-action" download="Green Computing Lecture 5">Lecture 5</a>
-                    <a href="courses/Green Computing/Green Computing Lecture 6.pdf" class="list-group-item list-group-item-action" download="Green Computing Lecture 6">Lecture 6</a>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/tabs/tab-1.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Assignment 1</h3>
-                    <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-                    <ol>
-                      <li>State and explain the terminologies that are used in solid waste.</li>
-                      <li>Describe the other types of solid waste apart from e-waste.</li>
-                      <li>Describe the similarities between e-waste and solid waste.</li>
-                      <li>Discuss the differences between solid waste and e-waste.</li>
-                    </ol>
-                    <p class="fst-italic">Due date: 23<sup>rd</sup> September, 2024 11:59 pm</p>
-
-
-                    <h3>Assignment 2 (Group Work)</h3>
-                    <p>Discuss the Basel Convention and Transboundary Movement</p>
-                    <ul>
-                      <li>Discuss Objectives</li>
-                      <li>Give an overview of the countries that participated</li>
-                      <li>Aims and provisions of the Basel Convention and Transboundary Movement</li>
-                    </ul>
-                    <p class="fst-italic">Due date: Unspecified</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/tabs/tab-2.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                    <!-- <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p> -->
-                    <a href="courses/Green Computing/GREEN COMPUTING TAKE AWAY.docx" class="list-group-item list-group-item-action" download="Green Computing Take Away CAT 1">Take Away CAT One</a>
-                    <a href="courses/Green Computing/CAT 2 Ewaste Take away.docx" class="list-group-item list-group-item-action" download="Green Computing Take Away CAT 2">Take Away CAT Two</a>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                            <div class="tab-pane active show" id="tab-1">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1 list-group">
+                                        {% for note in notes %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ note.title }}</h3>
+                                                {% if note.file %}
+                                                    <a href="{{ note.file.url }}" download="{{ note.name }}">{{ note.name }}</a>
+                                                {% else %}
+                                                    <p>{{ note.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="{% static 'assets/img/tabs/tab-1.png' %}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1 list-group">
+                                        {% for assignment in assignments %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ assignment.title }}</h3>
+                                                {% if assignment.file %}
+                                                    <a href="{{ assignment.file.url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
+                                                {% else %}
+                                                    <p>{{ assignment.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="{% static 'assets/img/tabs/tab-2.png' %}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1 list-group">
+                                        {% for cat in cats %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ cat.title }}</h3>
+                                                {% if cat.file %}
+                                                    <a href="{{ cat.file.url }}" download="{{ cat.name }}">{{ cat.name }}</a>
+                                                {% else %}
+                                                    <p>{{ cat.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                         </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1 list-group">
+                                        <!-- <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
                     <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/tabs/tab-4.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-5">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'assets/img/tabs/tab-5.png' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p> -->
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="{% static 'assets/img/tabs/tab-4.png' %}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-5">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                        <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro
+                                            quia.</p>
+                                        <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis
+                                            recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui
+                                            quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="{% static 'assets/img/tabs/tab-5.png' %}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
           </div>
         </div>
 

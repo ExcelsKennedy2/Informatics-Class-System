@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Add Events{% endblock %}
+
+{% block content %}
+
+<body class="course-details-page">
+
+<main class="main container">
+<form action="{% url 'add-event' %}" method="post" class="form-control p-3" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Add Event</h2>
+    <div class="form-group mb-3">
+        <input type="text" class="form-control" placeholder="Event name" name="name" required>
+    </div>
+    <div class="form-group mb-3">
+        <input type="file" class="form-control" name="image" required>
+    </div>
+    <div class="form-group mb-3">
+        <textarea cols="30" rows="10" placeholder="Event Description" name="description" class="form-control" required></textarea>
+    </div>
+    <div class="form-group mb-3">
+        <label for="day">Event Date:</label>
+        <input type="date" name="day" required>
+    </div>
+    <div>
+        <button class="btn btn-success mt-2" type="submit">Add Event</button>
+    </div>
+</form>
+</main>
+
+{% endblock %}

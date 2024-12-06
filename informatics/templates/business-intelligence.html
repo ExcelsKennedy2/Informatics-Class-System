@@ -105,38 +105,57 @@
                             <div class="tab-pane active show" id="tab-1">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <!-- <h3>Architecto ut aperiam autem id</h3> -->
-                                        <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-                                        <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
-                                        <p class="list-group-item list-group-item-action">
-                                            No notes yet.
-                                        </p>
+                                        {% for note in notes %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ note.title }}</h3>
+                                                {% if note.file %}
+                                                    <a href="{{ note.file.url }}" download="{{ note.name }}">{{ note.name }}</a>
+                                                {% else %}
+                                                    <p>{{ note.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="{% static 'assets/img/tabs/tab-1.png' %}" alt="tab-1" class="img-fluid">
+                                        <img src="{% static 'assets/img/tabs/tab-1.png' %}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tab-2">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <p class="list-group-item list-group-item-action">
-                                            No assignments yet.
-                                        </p>
+                                        {% for assignment in assignments %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ assignment.title }}</h3>
+                                                {% if assignment.file %}
+                                                    <a href="{{ assignment.file.url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
+                                                {% else %}
+                                                    <p>{{ assignment.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="{% static 'assets/img/tabs/tab-2.png' %}" alt="tab-2" class="img-fluid">
+                                        <img src="{% static 'assets/img/tabs/tab-2.png' %}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tab-3">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <!-- <h3>Impedit facilis occaecati odio neque aperiam sit</h3> -->
-                                        <p class="list-group-item list-group-item-action">No CATs have been given</p>
-                                    </div>
+                                        {% for cat in cats %}
+                                            <div class="list-group-item list-group-item-action">
+                                                <h3>{{ cat.title }}</h3>
+                                                {% if cat.file %}
+                                                    <a href="{{ cat.file.url }}" download="{{ cat.name }}">{{ cat.name }}</a>
+                                                {% else %}
+                                                    <p>{{ cat.text }}</p>
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                         </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="tab-3" class="img-fluid">
+                                        <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +167,7 @@
                     <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p> -->
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="{% static 'assets/img/tabs/tab-4.png' %}" alt="tab-4" class="img-fluid">
+                                        <img src="{% static 'assets/img/tabs/tab-4.png' %}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +182,7 @@
                                             quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="{% static 'assets/img/tabs/tab-5.png' %}" alt="tab-5" class="img-fluid">
+                                        <img src="{% static 'assets/img/tabs/tab-5.png' %}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>

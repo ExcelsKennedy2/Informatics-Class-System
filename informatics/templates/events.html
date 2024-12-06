@@ -20,6 +20,7 @@
                 to Informatics. Stay tuned for updates on guest lectures, hackathons, and industry networking opportunities. Mark your calendars and get ready 
                 to engage with industry experts, fellow students, and cutting-edge technologies.
               </p>
+                <a href="{% url 'add-event' %}" class="btn mt-3" style="background-color: #0e0f4bcb; color: white">Add Event</a>
             </div>
           </div>
         </div>
@@ -40,31 +41,22 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="{% static 'assets/img/events-item-1.jpg' %}" alt="event 1">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Herbicides safety detection app</a></h5>
-                <p class="fst-italic text-center">Friday, November 22th at 8:00 am</p>
-                <p class="card-text">Due to the ongoing strikes, submission of this app by group 2 members has been suspended indefinately. However, the team members are still working on the app.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="{% static 'assets/img/events-item-2.jpg' %}" alt="events 2">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Digital Ajira App</a></h5>
-                <p class="fst-italic text-center">Friday, November 22nd at 8:00 am</p>
-                <p class="card-text">Still in development. Group 1 members will be presenting this soon except due to the ongoing strikes, it's uncertain when the submission will take place. Updates will communicated via this channel.</p>
-              </div>
-            </div>
-
-          </div>
+            {% for d in event %}
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="{{ d.image.url }}" alt="event image">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="">{{ d.name }}</a></h5>
+                        <p class="fst-italic text-center">{{ d.day }}</p>
+                        <p class="card-text">{{ d.description }}</p>
+                          <a class="btn btn-info" href="/update_event/{{ d.id }}">Update</a>
+                          <td><a class="btn btn-danger" href="/delete_event/{{ d.id }}">Delete</a></td>
+                      </div>
+                    </div>
+                  </div>
+            {% endfor %}
         </div>
 
       </div>
