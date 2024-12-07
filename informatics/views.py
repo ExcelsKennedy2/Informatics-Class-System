@@ -1,7 +1,7 @@
 from itertools import chain
-
+import os
 from django.shortcuts import render, redirect
-from .models import TextContent, DocumentContent, Content, ContentManager, Event
+from .models import TextContent, DocumentContent, Content, ContentManager, Event, Course, Semester
 
 # Create your views here.
 def base(request):
@@ -161,15 +161,6 @@ def greenComputing(request):
     }
     return render(request, 'green-computing.html', context)
 
-# def operatingSystems(request):
-#     course_name = "Operating Systems"
-#     contents = chain(
-#         TextContent.objects.filter(course__name=course_name),
-#         DocumentContent.objects.filter(course__name=course_name)
-#     )
-#     context = {'contents': contents}
-#     return render(request, 'operating-systems.html', context)
-
 def operatingSystems(request):
     course_name = "Operating Systems"
     notes = chain(
@@ -232,6 +223,56 @@ def sas311(request):
         'cats': cats
     }
     return render(request, 'sas311.html', context)
+
+def add_content(request):
+    if request.method == 'POST':
+        content_type = request.POST.get('content_type')
+        title = request.POST.get('title')
+        course_id = request.POST.get('course')
+        semester_id = request.POST.get('semester')
+        text = request.POST.get('text', '')
+        uploaded_file = request.FILES.get('file')
+
+        # Validate data (optional)
+
+        if content_type in ('NOTE', 'CAT', 'ASSIGNMENT'):
+            if text:
+                # Create TextContent object (if text is provided)
+                content = TextContent.objects.create(
+                    content_type=content_type,
+                    title=title,
+                    course_id=course_id,
+                    semester_id=semester_id,
+                    text=text
+                )
+            elif uploaded_file:
+                # Extract filename without extension
+                filename, extension = os.path.splitext(uploaded_file.name)
+                # Set the title to the filename without extension
+                title = request.POST.get('title')
+
+                # Create DocumentContent object (if file is uploaded)
+                content = DocumentContent.objects.create(
+                    content_type=content_type,
+                    title=title,
+                    course_id=course_id,
+                    semester_id=semester_id,
+                    file=uploaded_file
+                )
+            else:
+                # Handle case where neither text nor file is provided
+                pass  # You can add error handling here
+
+        else:
+            # Handle invalid content type (optional)
+            pass
+
+        return redirect('dashboard')  # Redirect to a success page (optional)
+
+    courses = Course.objects.all()
+    semesters = Semester.objects.all()
+    context = {'courses': courses, 'semesters': semesters}
+    return render(request, 'add_content.html', context)
 
 def pricing(request):
     return render(request, 'pricing.html')

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Events{% endblock %}
+
+{% block content %}
+
+<body class="events-page">
+
+<main class="main container">
+    <form action="{% url 'update-content' content.id %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{ content.title }}">
+    {% if isinstance content TextContent %}
+        <textarea name="text">{{ content.text }}</textarea>
+    {% elif isinstance content DocumentContent %}
+        <input type="file" name="file">
+        <p>Current File: <a href="{{ content.file.url }}">{{ content.file.name }}</a></p>
+    {% endif %}
+    <button type="submit">Update Content</button>
+</form>
+</main>
+{% endblock %}

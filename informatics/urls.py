@@ -21,6 +21,7 @@ urlpatterns = [
     path('operating-systems-2/', views.operatingSystems, name='operating-systems'),
     path('programming2/', views.programming2, name='programming2'),
     path('ethics-integrity-and-social-responsibility/', views.sas311, name='sas311'),
+    path('add-content/', views.add_content, name='add-content'),
     path('pricing/', views.pricing, name='pricing'),
 ]
 if settings.DEBUG:
