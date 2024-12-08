@@ -29,7 +29,7 @@
         </div>
       </nav>
     </div><!-- End Page Title -->
-    <form method="POST" action="{% url 'pay' %}" class="col-md-6 container">
+    <form method="POST" action="{% url 'pay' %}" class="col-md-6 container my-3">
         {% csrf_token %}
 
         <label class="form-label mt-5">Phone Number</label>
@@ -40,6 +40,9 @@
 
         <input type="submit" name="submit" class="form-control mt-5 btn" value="Make Payment" style="background-color: #0e0f4bcb; color: white;">
     </form>
+    <p class="fst-italic text-center container"><small>To complete your payment, you will receive an M-Pesa STK Push message on your phone. Simply enter your M-Pesa PIN to
+        authorize the transaction. Please note that once the payment is successful, you will receive a confirmation message. For any inquiries or assistance,
+        feel free to contact our support team at <a href="tel:0719534660">0719534660</a> or <a href="mailto:excelskennedy@gmail.com">excelskennedy@gmail.com</a>.</small></p>
 </main>
 
 {% endblock %}
