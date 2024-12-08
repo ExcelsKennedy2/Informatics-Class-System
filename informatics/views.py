@@ -1,7 +1,12 @@
 from itertools import chain
 import os
 from django.shortcuts import render, redirect
-from .models import TextContent, DocumentContent, Content, ContentManager, Event, Course, Semester
+from .models import TextContent, DocumentContent, Event, Course, Semester
+from django.http import HttpResponse
+import requests
+from requests.auth import HTTPBasicAuth
+import json
+from . credentials import MpesaAccessToken, LipanaMpesaPpassword
 
 # Create your views here.
 def base(request):
@@ -273,6 +278,46 @@ def add_content(request):
     semesters = Semester.objects.all()
     context = {'courses': courses, 'semesters': semesters}
     return render(request, 'add_content.html', context)
+
+
+def pay(request):
+    if request.method == "POST":
+        phone = request.POST['phone']
+        amount = request.POST['amount']
+        access_token = MpesaAccessToken.validated_mpesa_access_token
+        api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
+        headers = {"Authorization": "Bearer %s" % access_token}
+        request = {
+            "BusinessShortCode": LipanaMpesaPpassword.Business_short_code,
+            "Password": LipanaMpesaPpassword.decode_password,
+            "Timestamp": LipanaMpesaPpassword.lipa_time,
+            "TransactionType": "CustomerPayBillOnline",
+            "Amount": amount,
+            "PartyA": phone,
+            "PartyB": LipanaMpesaPpassword.Business_short_code,
+            "PhoneNumber": phone,
+            "CallBackURL": "https://sandbox.safaricom.co.ke/mpesa/",
+            "AccountReference": "Excels Kennedy",
+            "TransactionDesc": "Web Development Charges"
+        }
+
+    response = requests.post(api_url, json=request, headers=headers)
+    return HttpResponse("success")
+
+def token(request):
+    consumer_key = 'KzFqHe8zMChJ5vs8qdIjSILn00MtMBJiY8qaq1NmhE8ApPXY'
+    consumer_secret = 'pDVE5Xe2LlXAZrd1L38wF9vMBe0BELDcX89dL1Fu6jyYuiFn09iPixSLGBb6nAew'
+    api_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
+
+    r = requests.get(api_URL, auth=HTTPBasicAuth(
+        consumer_key, consumer_secret))
+    mpesa_access_token = json.loads(r.text)
+    validated_mpesa_access_token = mpesa_access_token["access_token"]
+
+    return render(request, 'token.html', {"token":validated_mpesa_access_token})
+
+def stk(request):
+    return render(request, 'pay.html', {'navbar':'stk'})
 
 def pricing(request):
     return render(request, 'pricing.html')

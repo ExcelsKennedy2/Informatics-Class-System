@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pay Here{% endblock %}
+
+{% block content %}
+
+<body class="events-page">
+
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Payment Section</h1>
+              <p class="mb-0">This payment page is your one-stop shop for all class-related financial transactions. Here, you can easily and securely pay for field trips, materials, and other expenses. Just follow the steps, provide the required information, and complete your payment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Payment</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+    <form method="POST" action="{% url 'pay' %}" class="col-md-6 container">
+        {% csrf_token %}
+
+        <label class="form-label mt-5">Phone Number</label>
+        <input type="number" name="phone" value="254" class="form-control">
+
+        <label class="form-label mt-5">Amount</label>
+        <input type="number" name="amount" class="form-control">
+
+        <input type="submit" name="submit" class="form-control mt-5 btn" value="Make Payment" style="background-color: #0e0f4bcb; color: white;">
+    </form>
+</main>
+
+{% endblock %}

@@ -9,38 +9,47 @@
 
 <main class="main container">
     <h1>Add Content</h1>
-    <form action="{% url 'add-content' %}" method="post" enctype="multipart/form-data">
+    <form action="{% url 'add-content' %}" method="post" class="form-control p-3" enctype="multipart/form-data">
         {% csrf_token %}
+    <div class="form-group mb-3">
         <select name="content_type" required>
             <option value="NOTE">Note</option>
             <option value="CAT">CAT</option>
             <option value="ASSIGNMENT">Assignment</option>
         </select>
-        <br>
+    </div>
+
+    <div class="form-group mb-3">
         <label for="title">Title:</label>
-        <input type="text" name="title" required>
-        <br>
+        <input class="form-control" type="text" name="title" required>
+    </div>
+    <div class="form-group mb-3">
         <label for="course">Course:</label>
         <select name="course" required>
             {% for course in courses %}
                 <option value="{{ course.id }}">{{ course.name }}</option>
             {% endfor %}
         </select>
-        <br>
+    </div>
+    <div class="form-group mb-3">
         <label for="semester">Semester:</label>
         <select name="semester" required>
             {% for semester in semesters %}
                 <option value="{{ semester.id }}">{{ semester.name }}</option>
             {% endfor %}
         </select>
-        <br>
+    </div>
+    <div class="form-group mb-3">
         <label for="file">Upload File (Optional):</label>
-        <input type="file" name="file">
-        <br>
+        <input class="form-control" type="file" name="file">
+    </div>
+    <div class="form-group mb-3">
         <label for="text">Text Content (Optional):</label>
-        <textarea name="text" rows="10" cols="50"></textarea>
-        <br>
-        <button type="submit">Add Content</button>
+        <textarea class="form-control" name="text" rows="10" cols="50"></textarea>
+    </div>
+    <div>
+        <button type="submit" class="btn mt-2" style="background-color: #0e0f4bcb; color: white">Add Content</button>
+    </div>
     </form>
 </main>
 {% endblock %}

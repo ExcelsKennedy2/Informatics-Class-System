@@ -22,7 +22,10 @@ urlpatterns = [
     path('programming2/', views.programming2, name='programming2'),
     path('ethics-integrity-and-social-responsibility/', views.sas311, name='sas311'),
     path('add-content/', views.add_content, name='add-content'),
+    path('pay/', views.pay, name='pay'),
+    path('token/', views.token, name='token'),
     path('pricing/', views.pricing, name='pricing'),
+    path('stk/', views.stk, name="stk")
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
