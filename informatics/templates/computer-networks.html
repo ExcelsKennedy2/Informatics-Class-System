@@ -112,7 +112,7 @@
                                                 {% if note.file %}
                                                     <a href="{{ note.file.url }}" download="{{ note.name }}">{{ note.name }}</a>
                                                 {% else %}
-                                                    <p>{{ note.text }}</p>
+                                                    <p>{{ note.text|safe }}</p>
                                                 {% endif %}
                                             </div>
                                         {% endfor %}
@@ -131,7 +131,7 @@
                                                 {% if assignment.file %}
                                                     <a href="{{ assignment.file.url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
                                                 {% else %}
-                                                    <p>{{ assignment.text }}</p>
+                                                    <p>{{ assignment.text|safe }}</p>
                                                 {% endif %}
                                             </div>
                                         {% endfor %}
@@ -150,7 +150,7 @@
                                                 {% if cat.file %}
                                                     <a href="{{ cat.file.url }}" download="{{ cat.name }}">{{ cat.name }}</a>
                                                 {% else %}
-                                                    <p>{{ cat.text }}</p>
+                                                    <p>{{ cat.text|safe }}</p>
                                                 {% endif %}
                                             </div>
                                         {% endfor %}

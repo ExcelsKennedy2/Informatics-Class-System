@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import URLValidator
+from ckeditor.fields import RichTextField
 
 class Course(models.Model):
     """
@@ -59,7 +60,7 @@ class TextContent(Content):
     """
     Model for content typed out directly.
     """
-    text = models.TextField()
+    text = RichTextField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.title} ({self.content_type})"
@@ -67,7 +68,7 @@ class TextContent(Content):
 class Event(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
     image = models.ImageField(upload_to='events/')
-    description = models.TextField(blank=False, null=False)
+    description = RichTextField(blank=False, null=False)
     day = models.DateField(blank=False, null=False)
 
     def __str__(self):
