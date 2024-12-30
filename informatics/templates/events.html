@@ -20,7 +20,7 @@
                 to Informatics. Stay tuned for updates on guest lectures, hackathons, and industry networking opportunities. Mark your calendars and get ready 
                 to engage with industry experts, fellow students, and cutting-edge technologies.
               </p>
-                <a href="{% url 'add-event' %}" class="btn mt-3" style="background-color: #0e0f4bcb; color: white">Add Event</a>
+{#                <a href="{% url 'add-event' %}" class="btn mt-3" style="background-color: #0e0f4bcb; color: white">Add Event</a>#}
             </div>
           </div>
         </div>
@@ -51,8 +51,8 @@
                         <h5 class="card-title"><a href="">{{ d.name }}</a></h5>
                         <p class="fst-italic text-center">{{ d.day }}</p>
                         <p class="card-text">{{ d.description|safe }}</p>
-                          <a class="btn" style="background-color: #0e0f4bcb; color: white" href="/update_event/{{ d.id }}">Update</a>
-                          <a class="btn btn-danger" href="/delete_event/{{ d.id }}">Delete</a>
+{#                          <a class="btn" style="background-color: #0e0f4bcb; color: white" href="/update_event/{{ d.id }}">Update</a>#}
+{#                          <a class="btn btn-danger" href="/delete_event/{{ d.id }}">Delete</a>#}
                       </div>
                     </div>
                   </div>
