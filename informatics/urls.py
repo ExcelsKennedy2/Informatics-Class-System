@@ -25,7 +25,7 @@ urlpatterns = [
     path('pay/', views.pay, name='pay'),
     path('token/', views.token, name='token'),
     path('pricing/', views.pricing, name='pricing'),
-    path('stk/', views.stk, name="stk")
+    path('stk/', views.stk, name="stk"),
 
 
     # Third Semester
