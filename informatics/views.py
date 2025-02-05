@@ -321,3 +321,152 @@ def stk(request):
 
 def pricing(request):
     return render(request, 'pricing.html')
+
+# Third Year Second Semester
+
+def dses(request):
+    course_name = "Decision Support and Expert Systems"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'dses.html', context)
+
+def hci(request):
+    course_name = "Human-Computer Interaction"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'hci.html', context)
+
+def cyberLawAndEthics(request):
+    course_name = "Cyber Law and Ethics"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'cyber-law-and-ethics.html', context)
+
+def biometricsAndCyberSecurity(request):
+    course_name = "Biometrics and Cyber Security"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'biometrics-and-cyber-security.html', context)
+
+def cloudComputing(request):
+    course_name = "Cloud Computing and Emerging Technologies"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'cloud-computing.html', context)
+
+def multimediaSystems(request):
+    course_name = "Multimedia Systems and Animation Technologies"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'multimedia-systems.html', context)
+
+def dataScienceAndMachineLearning(request):
+    course_name = "Data Science and Machine Learning"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'data-science-and-machine-learning.html', context)

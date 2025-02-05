@@ -26,6 +26,16 @@ urlpatterns = [
     path('token/', views.token, name='token'),
     path('pricing/', views.pricing, name='pricing'),
     path('stk/', views.stk, name="stk")
+
+
+    # Third Semester
+    path('decision-support-and-expert-systems/', views.dses, name='dses'),
+    path('human-computer-interaction/', views.hci, name='hci'),
+    path('cyber-law-and-ethics/', views.cyberLawAndEthics, name='cyber-law'),
+    path('biometrics-and-cyber-security/', views.biometricsAndCyberSecurity, name='biometrics'),
+    path('cloud-computing-and-emerging-technologies/', views.cloudComputing, name='cloud-computing'),
+    path('multimedia-systems-and-animation-technologies/', views.multimediaSystems, name='multimedia'),
+    path('data-science-and-machine-learning/', views.dataScienceAndMachineLearning, name='datascience'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
