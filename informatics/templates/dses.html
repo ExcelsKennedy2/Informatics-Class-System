@@ -40,7 +40,7 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <img src="{% static 'assets/img/Decision Support Systems.png' %}" class="img-fluid" alt="Green Computing">
+                        <img src="{% static 'assets/img/dss.webp' %}" class="img-fluid" alt="Green Computing">
                         <h3>Decision Support and Expert Systems</h3>
                         <p>
                             To enhance your learning, variety of resources are provided including downloadable lecture
@@ -116,6 +116,8 @@
                                                     <p>{{ note.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No notes sent</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -135,6 +137,8 @@
                                                     <p>{{ assignment.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No assignment given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -154,6 +158,8 @@
                                                     <p>{{ cat.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No Takeaway CAT given</i></p>
                                         {% endfor %}
                                          </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
