@@ -17,7 +17,13 @@
                         <div class="col-lg-8">
                             <h1>Data Science and Machine Learning</h1>
                             <p class="mb-0">
-
+                                Data Science and Machine Learning focuses on extracting insights from data and building
+                                intelligent systems that can learn and make predictions. The course covers data analysis,
+                                visualization, and key machine learning techniques such as regression, classification,
+                                and clustering. Students will work with real-world datasets, applying algorithms to solve
+                                practical problems in areas like finance, healthcare, and social media. By the end, they’ll
+                                be equipped to analyze data, build predictive models, and understand how machines learn
+                                from data.
                             </p>
                         </div>
                     </div>
@@ -40,7 +46,7 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <img src="{% static 'assets/img/course-1.jpg' %}" class="img-fluid" alt="operating-systems">
+                        <img src="{% static 'assets/img/data science.jpg' %}" class="img-fluid" alt="data-science">
                         <h3>Data Science and Machine Learning</h3>
                         <p>
                             To enhance your learning, variety of resources are provided including downloadable lecture
@@ -67,8 +73,7 @@
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Schedule</h5>
-                            <p>Not Allocated</p>
-{#                            <p>Wednesday <br>10.00 am - 1.00 pm</p>#}
+                            <p>Monday <br>10.00 am - 1.00 pm</p>
                         </div>
 
                     </div>
@@ -111,6 +116,8 @@
                                                     <p>{{ note.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No notes sent</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -130,6 +137,8 @@
                                                     <p>{{ assignment.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No Assignments given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -149,6 +158,8 @@
                                                     <p>{{ cat.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No Takeaway CATs given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">

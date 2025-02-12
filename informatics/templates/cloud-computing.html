@@ -17,7 +17,12 @@
                         <div class="col-lg-8">
                             <h1>Cloud Computing</h1>
                             <p class="mb-0">
-
+                                Cloud Computing and Emerging Technologies explores the foundations of cloud computing alongside
+                                cutting-edge technologies shaping the future of IT. The course covers cloud models
+                                (IaaS, PaaS, SaaS), deployment strategies, and security considerations, along with innovations
+                                like edge computing, Internet of Things (IoT), artificial intelligence, and blockchain. Students
+                                will learn how these technologies integrate with cloud platforms to create scalable, intelligent,
+                                and secure solutions for modern applications.
                             </p>
                         </div>
                     </div>
@@ -40,7 +45,7 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <img src="{% static 'assets/img/course-1.jpg' %}" class="img-fluid" alt="operating-systems">
+                        <img src="{% static 'assets/img/cloud-computing.jpg' %}" class="img-fluid" alt="cloud-computing">
                         <h3>Cloud Computing and Emerging Technologies</h3>
                         <p>
                             To enhance your learning, variety of resources are provided including downloadable lecture
@@ -110,6 +115,8 @@
                                                     <p>{{ note.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No notes sent</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -129,6 +136,8 @@
                                                     <p>{{ assignment.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No assignment given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -148,6 +157,8 @@
                                                     <p>{{ cat.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No take away CATs given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
