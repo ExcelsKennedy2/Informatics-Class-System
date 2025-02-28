@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8273359e-a42c-4211-83af-a8a8767ebe32" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/InformaticsClassSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InformaticsClassSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/informatics/static/assets/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/informatics/static/assets/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/informatics/templates/base/base_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/informatics/templates/base/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/informatics/templates/base/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/informatics/templates/base/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformaticsClassSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformaticsClassSystem/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformaticsClassSystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformaticsClassSystem/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +25,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -54,8 +62,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Excels Kennedy's Projects/InformaticsClassSystem&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -123,6 +133,10 @@
       <workItem from="1739355651864" duration="16875000" />
       <workItem from="1739441691502" duration="186000" />
       <workItem from="1739705936665" duration="40000" />
+      <workItem from="1739878199640" duration="2799000" />
+      <workItem from="1740746369710" duration="1153000" />
+      <workItem from="1740747556828" duration="3715000" />
+      <workItem from="1740751375886" duration="266000" />
     </task>
     <servers />
   </component>
