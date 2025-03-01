@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8273359e-a42c-4211-83af-a8a8767ebe32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/informatics/static/assets/css/register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/informatics/static/assets/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/informatics/templates/base/base_auth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/informatics/templates/base/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/informatics/templates/base/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/informatics/templates/base/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformaticsClassSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformaticsClassSystem/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformaticsClassSystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/InformaticsClassSystem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="8273359e-a42c-4211-83af-a8a8767ebe32" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +125,7 @@
       <workItem from="1740746369710" duration="1153000" />
       <workItem from="1740747556828" duration="3715000" />
       <workItem from="1740751375886" duration="266000" />
+      <workItem from="1740751798173" duration="2657000" />
     </task>
     <servers />
   </component>
