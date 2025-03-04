@@ -147,3 +147,10 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+cloudinary.config(
+    cloud_name="datdnaklu",
+    api_key="343955362941129",
+    api_secret="EHXrX9cyruZl-JxsAzlD_QXx1Hs",
+    secure=True
+)

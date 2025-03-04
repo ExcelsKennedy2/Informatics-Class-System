@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.validators import URLValidator
 from ckeditor.fields import RichTextField
+from cloudinary.models import CloudinaryField
+import cloudinary.utils
+
 
 class Course(models.Model):
     """
@@ -50,11 +53,30 @@ class DocumentContent(Content):
     """
     Model for content uploaded as documents.
     """
-    file = models.FileField(upload_to='documents/')
+    # file = models.FileField(upload_to='documents/')
+    # name = models.CharField(max_length=255, default='document')
+    #
+    # def __str__(self):
+    #     return self.name
+    file = CloudinaryField(
+        'file',
+        resource_type='raw',
+        overwrite=True
+    )
     name = models.CharField(max_length=255, default='document')
 
     def __str__(self):
         return self.name
+
+    def get_download_url(self):
+        url, options = cloudinary.utils.cloudinary_url(
+            self.file.public_id,
+            resource_type="raw",
+            type="upload",
+            secure=True,
+            flags="attachment"  # This forces the file to download
+        )
+        return url
 
 class TextContent(Content):
     """
