@@ -115,7 +115,7 @@
                                             <div class="list-group-item list-group-item-action">
                                                 <h3>{{ note.title }}</h3>
                                                 {% if note.file %}
-                                                    <a href="{{ note.get_download_url }}" download="{{ note.name }}">{{ note.name }}</a>
+                                                    <a href="{{ note.file.url }}" download="{{ note.name }}">{{ note.name }}</a>
                                                 {% else %}
                                                     <p>{{ note.text|safe }}</p>
                                                 {% endif %}
@@ -136,7 +136,7 @@
                                             <div class="list-group-item list-group-item-action">
                                                 <h3>{{ assignment.title }}</h3>
                                                 {% if assignment.file %}
-                                                    <a href="{{ assignment.get_download_url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
+                                                    <a href="{{ assignment.file.url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
                                                 {% else %}
                                                     <p>{{ assignment.text|safe }}</p>
                                                 {% endif %}
@@ -157,7 +157,7 @@
                                             <div class="list-group-item list-group-item-action">
                                                 <h3>{{ cat.title }}</h3>
                                                 {% if cat.file %}
-                                                    <a href="{{ cat.get_download_url }}" download="{{ cat.name }}">{{ cat.name }}</a>
+                                                    <a href="{{ cat.file.url }}" download="{{ cat.name }}">{{ cat.name }}</a>
                                                 {% else %}
                                                     <p>{{ cat.text|safe }}</p>
                                                 {% endif %}
