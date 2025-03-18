@@ -58,6 +58,8 @@ class DocumentContent(Content):
     #
     # def __str__(self):
     #     return self.name
+    
+    # test 
     file = CloudinaryField(
         'file',
         resource_type='raw',
@@ -65,8 +67,8 @@ class DocumentContent(Content):
     )
     name = models.CharField(max_length=255, default='document')
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
 
     def get_download_url(self):
         url, options = cloudinary.utils.cloudinary_url(
@@ -77,6 +79,11 @@ class DocumentContent(Content):
             flags="attachment"  # This forces the file to download
         )
         return url
+
+    def __str__(self):
+        return self.name
+
+
 
 class TextContent(Content):
     """
