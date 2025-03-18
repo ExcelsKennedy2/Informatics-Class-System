@@ -136,21 +136,21 @@ LOGIN_URL = 'login'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'datdnaklu',
-    'API_KEY': '343955362941129',
-    'API_SECRET': 'EHXrX9cyruZl-JxsAzlD_QXx1Hs',
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-cloudinary.config(
-    cloud_name="datdnaklu",
-    api_key="343955362941129",
-    api_secret="EHXrX9cyruZl-JxsAzlD_QXx1Hs",
-    secure=True
-)
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'datdnaklu',
+#     'API_KEY': '343955362941129',
+#     'API_SECRET': 'EHXrX9cyruZl-JxsAzlD_QXx1Hs',
+# }
+#
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#
+# cloudinary.config(
+#     cloud_name="datdnaklu",
+#     api_key="343955362941129",
+#     api_secret="EHXrX9cyruZl-JxsAzlD_QXx1Hs",
+#     secure=True
+# )
