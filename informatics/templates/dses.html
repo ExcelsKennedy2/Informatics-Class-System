@@ -77,6 +77,87 @@
 
         </section><!-- /Courses Course Details Section -->
 
+   <!-- Example Section -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            /* margin-top: 50px; */
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .disease-list {
+            text-align: left;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <div class="container">
+        <h2>Rule-based Diagnostic System</h2>
+        <p>Enter your symptoms (comma-separated):</p>
+        <input type="text" id="userSymptoms" class="form-control" placeholder="e.g., fever, chills, headache">
+        <p>Example: cough with phlegm, chest pain, difficulty breathing</p>
+        <button onclick="diagnoseDisease()" class="btn btn-primary mt-3">Diagnose</button>
+
+        <div id="result" class="result"></div>
+        <div id="diseaseList" class="disease-list"></div>
+    </div>
+
+    <script>
+        function diagnoseDisease() {
+            // Symptoms dictionary for diseases
+            const diseases = {
+                'Malaria': new Set(['fever', 'chills', 'headache', 'nausea']),
+                'Typhoid': new Set(['prolonged fever', 'abdominal pain', 'diarrhea']),
+                'Diabetes': new Set(['frequent urination', 'excessive thirst', 'fatigue']),
+                'Pneumonia': new Set(['cough with phlegm', 'chest pain', 'difficulty breathing']),
+                'Hypertension': new Set(['high blood pressure', 'headaches', 'dizziness']),
+            };
+
+            // Get user input
+            let userInput = document.getElementById('userSymptoms').value.toLowerCase();
+            let userSymptoms = new Set(userInput.split(',').map(symptom => symptom.trim()));
+
+            // To store possible diseases based on the match
+            let possibleDiseases = [];
+
+            // Check for diseases with matching symptoms
+            for (let disease in diseases) {
+                let symptoms = diseases[disease];
+                let matchCount = 0;
+
+                // Count the number of matching symptoms
+                for (let symptom of symptoms) {
+                    if (userSymptoms.has(symptom)) {
+                        matchCount++;
+                    }
+                }
+
+                // If at least half the symptoms match, consider it a possible diagnosis
+                if (matchCount >= symptoms.size / 2) {
+                    possibleDiseases.push(disease);
+                }
+            }
+
+            // Display the result
+            let resultElement = document.getElementById('result');
+            let diseaseListElement = document.getElementById('diseaseList');
+
+            if (possibleDiseases.length > 0) {
+                resultElement.textContent = 'Possible Diagnosis:';
+                diseaseListElement.innerHTML = possibleDiseases.map(disease => `<p>- ${disease}</p>`).join('');
+            } else {
+                resultElement.textContent = 'No clear diagnosis found. Consider consulting a doctor.';
+                diseaseListElement.innerHTML = '';
+            }
+        }
+    </script>
+        <!--End of Example Section -->
+
+
         <!-- Tabs Section -->
         <section id="tabs" class="tabs section">
 
