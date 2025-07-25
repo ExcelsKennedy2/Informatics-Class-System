@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'cloudinary',
     'cloudinary_storage',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     api_secret="EHXrX9cyruZl-JxsAzlD_QXx1Hs",
 #     secure=True
 # )
+PWA_APP_NAME = 'Informatics'
+PWA_APP_DESCRIPTION = "Informatics Class System"
+PWA_APP_THEME_COLOR = '#0a0a0a'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/icons/icon-1.png',
+        'sizes': '192x192'
+    },
+    {
+        'src': '/static/icons/icon-2.jpg',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
