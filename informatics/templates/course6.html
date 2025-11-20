@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Data Science and Machine Learning{% endblock %}
+{% block title %}Information Security and System Audit{% endblock %}
 
 {% block content %}
 
@@ -15,15 +15,14 @@
                 <div class="container">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
-                            <h1>Data Science and Machine Learning</h1>
+                            <h1>Information Security and System Audit</h1>
                             <p class="mb-0">
-                                Data Science and Machine Learning focuses on extracting insights from data and building
-                                intelligent systems that can learn and make predictions. The course covers data analysis,
-                                visualization, and key machine learning techniques such as regression, classification,
-                                and clustering. Students will work with real-world datasets, applying algorithms to solve
-                                practical problems in areas like finance, healthcare, and social media. By the end, they’ll
-                                be equipped to analyze data, build predictive models, and understand how machines learn
-                                from data.
+                                Biometrics and Cyber Security focuses on using unique human traits like fingerprints,
+                                facial recognition, and voice patterns for secure authentication. The course covers
+                                biometric system design, data protection, and advanced cybersecurity practices like
+                                cryptography and threat detection. Students will explore how biometrics enhance security
+                                in industries like banking and healthcare while learning to analyze and mitigate
+                                cybersecurity risks.
                             </p>
                         </div>
                     </div>
@@ -33,7 +32,7 @@
                 <div class="container">
                     <ol>
                         <li><a href="{% url 'index' %}">Home</a></li>
-                        <li class="current">Data Science and Machine Learning</li>
+                        <li class="current">Information Security and System Audit</li>
                     </ol>
                 </div>
             </nav>
@@ -46,8 +45,8 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <img src="{% static 'assets/img/data science.jpg' %}" class="img-fluid" alt="data-science">
-                        <h3>Data Science and Machine Learning</h3>
+                        <img src="{% static 'assets/img/cyber security.jpg' %}" class="img-fluid" alt="biometrics">
+                        <h3>Information Security and System Audit</h3>
                         <p>
                             To enhance your learning, variety of resources are provided including downloadable lecture
                             notes,
@@ -58,22 +57,22 @@
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Lecturer</h5>
-                            <p><a href="#">Mr. Francis Onyango</a></p>
+                            <p><a href="#">Mr. Limo Towett</a></p>
                         </div>
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Course Code</h5>
-                            <p>COM 327</p>
+                            <p>INF 417</p>
                         </div>
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Available Seats</h5>
-                            <p>7</p>
+                            <p>8</p>
                         </div>
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Schedule</h5>
-                            <p>Monday <br>10.00 am - 1.00 pm</p>
+                            <p>Wednesday <br>11.00 am - 1.00 pm</p>
                         </div>
 
                     </div>
@@ -117,7 +116,7 @@
                                                 {% endif %}
                                             </div>
                                             {% empty %}
-                                            <p><i>No notes sent</i></p>
+                                            <p><i>No notes given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -138,7 +137,7 @@
                                                 {% endif %}
                                             </div>
                                             {% empty %}
-                                            <p><i>No Assignments given</i></p>
+                                            <p><i>No assignments given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -159,7 +158,7 @@
                                                 {% endif %}
                                             </div>
                                             {% empty %}
-                                            <p><i>No Takeaway CATs given</i></p>
+                                            <p><i>No cats given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">

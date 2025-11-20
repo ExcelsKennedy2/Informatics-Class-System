@@ -57,17 +57,17 @@
           </tr>
           <tr>
             <th>Tuesday</th>
-            <td>7:30AM - 11:00AM</td>
-            <td>Decision Support and <br>Expert Systems</td>
+            <td>9:00AM - 11:00AM</td>
+            <td>Robotics and <br>Intelligent Systems</td>
           </tr>         
           <tr>
             <th rowspan="2">Wednesday</th>
-            <td>10:00AM - 1:00PM</td>
-            <td>Biometrics and CyberSecurity</td>
+            <td>8:00AM - 10:00AM</td>
+            <td>Artificial Intelligence</td>
           </tr>
           <tr>
-            <td>3:00PM - 5:00PM</td>
-            <td>Cyber Law and Ethics</td>
+            <td>11:00AM - 01:00PM</td>
+            <td>Information Security and System Audit</td>
           </tr>
           <tr>
             <th>Thursday</th>
@@ -76,12 +76,12 @@
           </tr>
           <tr>
             <th rowspan="2">Friday</th>
-            <td>8:00AM - 10:00AM</td>
-            <td>Multimedia Systems and <br>Animation technologies</td>
+            <td>7:00AM - 8:00AM</td>
+            <td>Artificial Intelligence</td>
           </tr>
           <tr>
-            <td>1:00PM - 3:00PM</td>
-            <td>Cloud Computing and Emerging Technologies</td>
+            <td>8:00AM - 10:00AM</td>
+            <td>Computer Graphics and Animations</td>
           </tr>
         </tbody>
         
@@ -101,11 +101,11 @@
               <img src="{% static 'assets/img/dss.webp' %}" class="img-fluid" alt="ethics">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Decision Support and<br>Expert Systems</p>
-                  <p class="price">INF 321</p>
+                  <p class="category">Robotics and Intelligent<br> Systems</p>
+                  <p class="price">INF 412</p>
                 </div>
 
-                <h3><a href="{% url 'dses' %}">Decision Support and Expert Systems</a></h3>
+                <h3><a href="{% url 'robotics' %}">Robotics and Intelligent Systems</a></h3>
                 <p class="description">
                   Decision Support and Expert Systems is all about smart tech that helps make decisions like a pro! We learn how
                     to create systems that think, analyze, and give advice—just like a human expert. It’s where data, tech, and
@@ -114,7 +114,7 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="{% static 'assets/img/trainers/Dr. James Abila.jpeg' %}" class="img-fluid" alt="Ephraim">
-                    <a href="{% url 'dses' %}" class="trainer-link">Dr. James Abila</a>
+                    <a href="{% url 'robotics' %}" class="trainer-link">Mr. Calvin Kitaka</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;50
@@ -131,11 +131,11 @@
               <img src="{% static 'assets/img/hci.jpg' %}" class="img-fluid" alt="green computing">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Human Computer Interaction</p>
-                  <p class="price">INF 322</p>
+                  <p class="category">Advanced Artificial Intelligence</p>
+                  <p class="price">INF 413</p>
                 </div>
 
-                <h3><a href="{% url 'hci' %}">Human Computer Interaction</a></h3>
+                <h3><a href="{% url 'artificial-intelligence' %}">Advanced Artificial Intelligence</a></h3>
                 <p class="description">
                     Human-Computer Interaction explores how people interact with technology and how to design systems
                     that are user-friendly and intuitive. It’s all about creating better experiences with computers,
@@ -144,7 +144,7 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="{% static 'assets/img/trainers/Ms. Tabitha.png' %}" class="img-fluid" alt="tabitha">
-                    <a href="{% url 'hci' %}" class="trainer-link">Ms. Tabitha Nyongesa</a>
+                    <a href="{% url 'artificial-intelligence' %}" class="trainer-link">Mr. Abel Mulongo</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;50
@@ -161,11 +161,11 @@
               <img src="{% static 'assets/img/cyber-law.jfif' %}" class="img-fluid" alt="cyber law">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Cyber Law</p>
-                  <p class="price">INF 323</p>
+                  <p class="category">Computer Graphics and Animation</p>
+                  <p class="price">INF 414</p>
                 </div>
 
-                <h3><a href="{% url 'cyber-law' %}">Cyber Law and Ethics</a></h3>
+                <h3><a href="{% url 'computer-graphics' %}">Computer Graphics and Animation</a></h3>
                 <p class="description">
                     Cyber Law and Ethics focuses on the rules and principles that govern the digital world. It covers
                     online rights, cybercrime, data protection, and the ethical responsibilities of using technology.
@@ -174,7 +174,7 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="{% static 'assets/img/trainers/avatar.jpeg' %}" class="img-fluid" alt="Steve">
-                    <a href="{% url 'cyber-law' %}" class="trainer-link">Mr. Francis Onyango</a>
+                    <a href="{% url 'computer-graphics' %}" class="trainer-link">Mr. Andreas K</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;50
@@ -188,14 +188,14 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 mb-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="course-item">
-              <img src="{% static 'assets/img/cyber security.jpg' %}" class="img-fluid" alt="cs">
+              <img src="{% static 'assets/img/cyber security.jpg' %}" class="img-fluid" alt="computer-graphics">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Cyber Security</p>
-                  <p class="price">INF 324</p>
+                  <p class="category">Computer Graphics and Animation</p>
+                  <p class="price">INF 414</p>
                 </div>
 
-                <h3><a href="{% url 'biometrics' %}">Biometrics and CyberSecurity</a></h3>
+                <h3><a href="{% url 'network-design' %}">Network Design and Administration</a></h3>
                 <p class="description">
                     Biometrics and Cyber Security dives into advanced security techniques, using unique human traits
                     like fingerprints and facial recognition to protect digital systems. It’s all about safeguarding
@@ -204,7 +204,7 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="{% static 'assets/img/trainers/avatar.jpeg' %}" class="img-fluid" alt="Francis">
-                    <a href="{% url 'biometrics' %}" class="trainer-link">Mr. Francis Onyango</a>
+                    <a href="{% url 'network-design' %}" class="trainer-link">Mr. Alex K</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;35
@@ -218,14 +218,14 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 mb-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="course-item">
-              <img src="{% static 'assets/img/cloud-computing.jpg' %}" class="img-fluid" alt="cloud computing">
+              <img src="{% static 'assets/img/cloud-computing.jpg' %}" class="img-fluid" alt="software-engineering">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Cloud Computing</p>
-                  <p class="price">INF 325</p>
+                  <p class="category">Software Engineering</p>
+                  <p class="price">INF 416</p>
                 </div>
 
-                <h3><a href="{% url 'computer-networks' %}">Cloud Computing and Emerging Technologies</a></h3>
+                <h3><a href="{% url 'software-engineering' %}">Software Engineering</a></h3>
                 <p class="description">
                     Cloud Computing is about accessing and storing data and applications over the internet instead of
                     your computer’s hard drive. It’s fast, scalable, and everywhere—powering services like streaming,
@@ -234,7 +234,7 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="{% static 'assets/img/trainers/Mr. Steve Oloo.jfif' %}" class="img-fluid" alt="limo">
-                    <a href="{% url 'cloud-computing' %}" class="trainer-link">Dr. Steve Oloo</a>
+                    <a href="{% url 'software-engineering' %}" class="trainer-link">Mr. Alex S</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;35
@@ -248,21 +248,21 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 mb-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="course-item">
-              <img src="{% static 'assets/img/multimedia-animation.webp' %}" class="img-fluid" alt="multimedia">
+              <img src="{% static 'assets/img/multimedia-animation.webp' %}" class="img-fluid" alt="Information Security and System Audit">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Multimedia systems</p>
-                  <p class="price">INF 326</p>
+                  <p class="category">Information Security and System Audit</p>
+                  <p class="price">INF 417</p>
                 </div>
 
-                <h3><a href="{% url 'multimedia' %}">Multimedia systems and <br>Animation Technologies</a></h3>
+                <h3><a href="{% url 'information-security' %}">Information Security and <br>System Audit</a></h3>
                 <p class="description">Multimedia Systems and Animation Technologies is all about creating engaging
                     digital content—combining text, images, audio, video, and animations. We explore tools and
                     techniques to design interactive media and bring animations to life. 🎥🎨📀</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
-                    <img src="{% static 'assets/img/trainers/quinter.jpg' %}" class="img-fluid" alt="quinter">
-                    <a href="{% url 'multimedia' %}" class="trainer-link">Ms. Quinter</a>
+                    <img src="{% static 'assets/img/trainers/quinter.jpg' %}" class="img-fluid" alt="limo">
+                    <a href="{% url 'information-security' %}" class="trainer-link">Mr. Limo Towett</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;35
@@ -279,11 +279,11 @@
               <img src="{% static 'assets/img/data science.jpg' %}" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Data Science</p>
-                  <p class="price">COM 327</p>
+                  <p class="category">Informatics Project II</p>
+                  <p class="price">INF 418</p>
                 </div>
 
-                <h3><a href="{% url 'datascience' %}">Data Science and Machine Learning</a></h3>
+                <h3><a href="{% url 'informatics-project-2' %}">Informatics Project II</a></h3>
                 <p class="description">
                     Data Science and Machine Learning is about using data to discover insights and build smart systems
                     that can learn and make predictions. It combines statistics, coding, and algorithms to solve
@@ -292,7 +292,38 @@
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="{% static 'assets/img/trainers/avatar.jpeg' %}" class="img-fluid" alt="francis">
-                    <a href="{% url 'datascience' %}" class="trainer-link">Mr. Francis Onyango</a>
+                    <a href="{% url 'informatics-project-2' %}" class="trainer-link">Dr. Steve Oloo</a>
+                  </div>
+                  <!-- <div class="trainer-rank d-flex align-items-center">
+                    <i class="bi bi-person user-icon"></i>&nbsp;20
+                    &nbsp;&nbsp;
+                    <i class="bi bi-heart heart-icon"></i>&nbsp;85
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 mb-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item">
+              <img src="{% static 'assets/img/data science.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Entreprenuership and Employability</p>
+                  <p class="price">BCE 413</p>
+                </div>
+
+                <h3><a href="{% url 'entreprenuership-and-employability2' %}">Entreprenuership and Employability</a></h3>
+                <p class="description">
+                    Data Science and Machine Learning is about using data to discover insights and build smart systems
+                    that can learn and make predictions. It combines statistics, coding, and algorithms to solve
+                    real-world problems with the power of data. 📊🤖
+                </p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static 'assets/img/trainers/avatar.jpeg' %}" class="img-fluid" alt="francis">
+                    <a href="{% url 'entreprenuership-and-employability' %}" class="trainer-link">Ms. Viola Owiyo</a>
                   </div>
                   <!-- <div class="trainer-rank d-flex align-items-center">
                     <i class="bi bi-person user-icon"></i>&nbsp;20
@@ -305,6 +336,8 @@
           </div> <!-- End Course Item-->
 
         </div>
+
+
         <div class="p-5 border rounded">
           <div class="list-group" data-aos="zoom-in" data-aos-delay="200">
           <h3><i class="bi bi-whatsapp"></i> WhatsApp Groups</h3>

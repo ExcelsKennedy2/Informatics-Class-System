@@ -1,112 +1,108 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Ethics, Integrity And Social Responsibility{% endblock %}
+{% block title %}Network Design and Administration{% endblock %}
 
 {% block content %}
+
 <body class="course-details-page">
-  <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Ethics, Integrity And Social Responsibility</h1>
-              <p class="mb-0">Delve into the ethical implications of technology and its impact 
-                on society. He explores topics such as data privacy, cybersecurity, intellectual 
-                propety rights, and digital citizenship.
-              </p>
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade">
+            <div class="heading">
+                <div class="container">
+                    <div class="row d-flex justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1>Network Design and Administration</h1>
+                            <p class="mb-0">Cover the fundamental principles of network communication, exploring topics such as networking protocols, network topologies, and network security.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li class="current">Ethics, Integrity And Social Responsibility</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="current">Network Design and Administration</li>
+                    </ol>
+                </div>
+            </nav>
+        </div><!-- End Page Title -->
 
-    <!-- Courses Course Details Section -->
-    <section id="courses-course-details" class="courses-course-details section">
+        <!-- Courses Course Details Section -->
+        <section id="courses-course-details" class="courses-course-details section">
 
-      <div class="container" data-aos="fade-up">
+            <div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-8">
-            <img src="{% static 'assets/img/Ethical-Responsibility.jpg' %}" class="img-fluid" alt="Ethical-Responsibility">
-            <h3>Ethical Responsibility</h3>
-            <p>
-              To enhance your learning, variety of resources are provided including downloadable lecture notes, 
-              online tutorial videos and you can access all the assignments and CATs here. 
-            </p>
-          </div>
-          <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <img src="{% static 'assets/img/computer networks.jpeg' %}" class="img-fluid" alt="computer-networks">
+                        <h3>Network Design and Administration</h3>
+                        <p>
+                            To enhance your learning, variety of resources are provided including downloadable lecture
+                            notes,
+                            online tutorial videos and you can access all the assignments and CATs here.
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Lecturer</h5>
-              <p><a href="#">Mr. Ephraim Ochieng</a></p>
+                        <div class="course-info d-flex justify-content-between align-items-center">
+                            <h5>Lecturer</h5>
+                            <p><a href="#">Mr. Alex S</a></p>
+                        </div>
+
+                        <div class="course-info d-flex justify-content-between align-items-center">
+                            <h5>Course Code</h5>
+                            <p>INF 415</p>
+                        </div>
+
+                        <div class="course-info d-flex justify-content-between align-items-center">
+                            <h5>Available Seats</h5>
+                            <p>8</p>
+                        </div>
+
+                        <div class="course-info d-flex justify-content-between align-items-center">
+                            <h5>Schedule</h5>
+                            <p>Monday <br>8.00 am - 11.00 am</p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Course Code</h5>
-              <p>SAS 311</p>
-            </div>
+        </section><!-- /Courses Course Details Section -->
 
-            <!-- <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Available Seats</h5>
-              <p>8</p>
-            </div> -->
+        <!-- Tabs Section -->
+        <section id="tabs" class="tabs section">
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Schedule</h5>
-              <p>Thursday <br>4.30 pm - 6.00 pm</p>
-            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Zoom link</h5>
-              <p><a href="https://us06web.zoom.us/j/82059987330?pwd=NzIcnm33bT7KJh6qcFsf24qa4BG5wx.1">Join Class</a></p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Courses Course Details Section -->
-
-    <!-- Tabs Section -->
-    <section id="tabs" class="tabs section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-3">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Lecture Notes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Assignments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">CATs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Class Zoom link</a>
-              </li>
-              <!-- <li class="nav-item">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Lecture Notes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Assignments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">CATs</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">WhatsApp Group Link</a>
+                            </li> -->
+                            <!-- <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
               </li> -->
-            </ul>
-          </div>
-          <div class="col-lg-9 mt-4 mt-lg-0">
-            <div class="tab-content">
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 mt-4 mt-lg-0">
+                        <div class="tab-content">
                             <div class="tab-pane active show" id="tab-1">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
@@ -128,9 +124,9 @@
                             </div>
                             <div class="tab-pane" id="tab-2">
                                 <div class="row">
-                                     <div class="list-group-item list-group-item-action">
-                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
+                                    <div class="col-lg-8 details order-2 order-lg-1 list-group">
                                         {% for assignment in assignments %}
+                                            <div class="list-group-item list-group-item-action">
                                                 <h3>{{ assignment.title }}</h3>
                                                 {% if assignment.file %}
                                                     <a href="{{ assignment.file.url }}" download="{{ assignment.name }}">{{ assignment.name }}</a>
@@ -192,13 +188,13 @@
                                 </div>
                             </div>
                         </div>
-          </div>
-        </div>
+                    </div>
+                </div>
 
-      </div>
+            </div>
 
-    </section><!-- /Tabs Section -->
+        </section><!-- /Tabs Section -->
 
-  </main>
+    </main>
 
 {% endblock %}

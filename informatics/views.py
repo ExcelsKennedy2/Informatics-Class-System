@@ -82,153 +82,6 @@ def lecturers(request):
 def dashboard(request):
     return render(request, 'dashboard.html')
 
-def businessIntelligence(request):
-    course_name = "Business Intelligence"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'business-intelligence.html', context)
-
-def computerNetworks(request):
-    course_name = "Computer Networks"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'computer-networks.html', context)
-
-def fose(request):
-    course_name = "Fundamentals of Software Engineering"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'fose.html', context)
-
-def greenComputing(request):
-    course_name = "Green Computing"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'green-computing.html', context)
-
-def operatingSystems(request):
-    course_name = "Operating Systems"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'operating-systems.html', context)
-
-def programming2(request):
-    course_name = "Programming For The Internet And Mobile Devices"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'programming2.html', context)
-
-def sas311(request):
-    course_name = "Ethics, Integrity And Social Responsibility"
-    notes = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
-    )
-    assignments = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
-    )
-    cats = chain(
-        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
-        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
-    )
-    context = {
-        'notes': notes,
-        'assignments': assignments,
-        'cats': cats
-    }
-    return render(request, 'sas311.html', context)
-
 def add_content(request):
     if request.method == 'POST':
         content_type = request.POST.get('content_type')
@@ -324,8 +177,8 @@ def pricing(request):
 
 # Third Year Second Semester
 
-def dses(request):
-    course_name = "Decision Support and Expert Systems"
+def course1(request):
+    course_name = "Robotics and Intelligent Systems"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -343,10 +196,10 @@ def dses(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'dses.html', context)
+    return render(request, 'course1.html', context)
 
-def hci(request):
-    course_name = "Human-Computer Interaction"
+def course2(request):
+    course_name = "Artificial Intelligence"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -364,10 +217,10 @@ def hci(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'hci.html', context)
+    return render(request, 'course2.html', context)
 
-def cyberLawAndEthics(request):
-    course_name = "Cyber Law and Ethics"
+def course3(request):
+    course_name = "Computer Graphics and Animation"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -385,10 +238,10 @@ def cyberLawAndEthics(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'cyber-law-and-ethics.html', context)
+    return render(request, 'course3.html', context)
 
-def biometricsAndCyberSecurity(request):
-    course_name = "Biometrics and Cyber Security"
+def course4(request):
+    course_name = "Network Design and Administration"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -406,10 +259,10 @@ def biometricsAndCyberSecurity(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'biometrics-and-cyber-security.html', context)
+    return render(request, 'course4.html', context)
 
-def cloudComputing(request):
-    course_name = "Cloud Computing and Emerging Technologies"
+def course5(request):
+    course_name = "Software Engineering"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -427,10 +280,10 @@ def cloudComputing(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'cloud-computing.html', context)
+    return render(request, 'course5.html', context)
 
-def multimediaSystems(request):
-    course_name = "Multimedia Systems and Animation Technologies"
+def course6(request):
+    course_name = "Information Security and System Audit"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -448,10 +301,10 @@ def multimediaSystems(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'multimedia-systems.html', context)
+    return render(request, 'course6.html', context)
 
-def dataScienceAndMachineLearning(request):
-    course_name = "Data Science and Machine Learning"
+def course7(request):
+    course_name = "Informatics Project"
     notes = chain(
         TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
         DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
@@ -469,4 +322,25 @@ def dataScienceAndMachineLearning(request):
         'assignments': assignments,
         'cats': cats
     }
-    return render(request, 'data-science-and-machine-learning.html', context)
+    return render(request, 'course7.html', context)
+
+def course8(request):
+    course_name = "Entreprenuership and Employability"
+    notes = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='NOTE'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='NOTE')
+    )
+    assignments = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='ASSIGNMENT')
+    )
+    cats = chain(
+        TextContent.objects.filter(course__name=course_name, content_type='CAT'),
+        DocumentContent.objects.filter(course__name=course_name, content_type='CAT')
+    )
+    context = {
+        'notes': notes,
+        'assignments': assignments,
+        'cats': cats
+    }
+    return render(request, 'course8.html', context)

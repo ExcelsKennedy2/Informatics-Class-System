@@ -1,108 +1,113 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Biometrics and Cybersecurity{% endblock %}
+{% block title %}Computer Graphics and Animation{% endblock %}
 
 {% block content %}
 
 <body class="course-details-page">
 
-    <main class="main">
+  <main class="main">
 
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade">
-            <div class="heading">
-                <div class="container">
-                    <div class="row d-flex justify-content-center text-center">
-                        <div class="col-lg-8">
-                            <h1>Biometrics and Cybersecurity</h1>
-                            <p class="mb-0">
-                                Biometrics and Cyber Security focuses on using unique human traits like fingerprints,
-                                facial recognition, and voice patterns for secure authentication. The course covers
-                                biometric system design, data protection, and advanced cybersecurity practices like
-                                cryptography and threat detection. Students will explore how biometrics enhance security
-                                in industries like banking and healthcare while learning to analyze and mitigate
-                                cybersecurity risks.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Computer Graphics and Animation</h1>
+              <p class="mb-0">
+                  Human-Computer Interaction (HCI) focuses on designing and evaluating user-friendly systems that enhance
+                  how people interact with technology. The course covers usability principles, user interface design, and
+                  the psychology of human interaction with computers. Students will learn how to create intuitive,
+                  accessible, and engaging interfaces by applying design techniques and user-centered approaches. By the
+                  end, they’ll be able to develop systems that prioritize user experience and improve human-technology
+                  interaction.
+              </p>
             </div>
-            <nav class="breadcrumbs">
-                <div class="container">
-                    <ol>
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li class="current">Biometrics and Cybersecurity</li>
-                    </ol>
-                </div>
-            </nav>
-        </div><!-- End Page Title -->
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Computer Graphics and Animation</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
 
-        <!-- Courses Course Details Section -->
-        <section id="courses-course-details" class="courses-course-details section">
+    <!-- Courses Course Details Section -->
+    <section id="courses-course-details" class="courses-course-details section">
 
-            <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
 
-                <div class="row">
-                    <div class="col-lg-8">
-                        <img src="{% static 'assets/img/cyber security.jpg' %}" class="img-fluid" alt="biometrics">
-                        <h3>Biometrics and Cybersecurity</h3>
-                        <p>
-                            To enhance your learning, variety of resources are provided including downloadable lecture
-                            notes,
-                            online tutorial videos and you can access all the assignments and CATs here.
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-8">
+            <img src="{% static 'assets/img/hci.jpg' %}" class="img-fluid" alt="Computer Graphics and Animation">
+            <h3>Computer Graphics and Animation</h3>
+            <p>
+              To enhance your learning, variety of resources are provided including downloadable lecture notes,
+              online tutorial videos and you can access all the assignments and CATs here.
+            </p>
+          </div>
+          <div class="col-lg-4">
 
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Lecturer</h5>
-                            <p><a href="#">Mr. Francis Onyango</a></p>
-                        </div>
-
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Course Code</h5>
-                            <p>INF 324</p>
-                        </div>
-
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Available Seats</h5>
-                            <p>7</p>
-                        </div>
-
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Schedule</h5>
-                            <p>Wednesday <br>10.00 am - 1.00 pm</p>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Lecturer</h5>
+              <p><a href="#">Mr. Andreas K</a></p>
             </div>
 
-        </section><!-- /Courses Course Details Section -->
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Course Code</h5>
+              <p>INF 414</p>
+            </div>
 
-        <!-- Tabs Section -->
-        <section id="tabs" class="tabs section">
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Available Seats</h5>
+              <p>30</p>
+            </div>
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Schedule</h5>
+              <p>Friday <br>8.00 am - 10.00 am</p>
+            </div>
 
-                <div class="row">
-                    <div class="col-lg-3">
-                        <ul class="nav nav-tabs flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Lecture Notes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Assignments</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">CATs</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-9 mt-4 mt-lg-0">
-                        <div class="tab-content">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Courses Course Details Section -->
+
+    <!-- Tabs Section -->
+    <section id="tabs" class="tabs section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Lecture Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Assignments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">CATs</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
                             <div class="tab-pane active show" id="tab-1">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
@@ -116,7 +121,7 @@
                                                 {% endif %}
                                             </div>
                                             {% empty %}
-                                            <p><i>No notes given</i></p>
+                                            <p><i>No notes sent</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -158,9 +163,9 @@
                                                 {% endif %}
                                             </div>
                                             {% empty %}
-                                            <p><i>No cats given</i></p>
+                                            <p><i>No Takeaway CATs given</i></p>
                                         {% endfor %}
-                                    </div>
+                                         </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
                                         <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="" class="img-fluid">
                                     </div>
@@ -194,13 +199,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+          </div>
+        </div>
 
-            </div>
+      </div>
 
-        </section><!-- /Tabs Section -->
+    </section><!-- /Tabs Section -->
 
-    </main>
+  </main>
 
 {% endblock %}

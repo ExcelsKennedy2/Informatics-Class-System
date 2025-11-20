@@ -14,13 +14,6 @@ urlpatterns = [
     path('update_event/<id>/', views.update_event, name='update_event'),
     path('lecturers/', views.lecturers, name='lecturers'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('business-intelligence/', views.businessIntelligence, name='business-intelligence'),
-    path('computer-networks/', views.computerNetworks, name='computer-networks'),
-    path('fundamentals-of-software-engineering/', views.fose, name='fose'),
-    path('green-computing/', views.greenComputing, name='green-computing'),
-    path('operating-systems-2/', views.operatingSystems, name='operating-systems'),
-    path('programming2/', views.programming2, name='programming2'),
-    path('ethics-integrity-and-social-responsibility/', views.sas311, name='sas311'),
     path('add-content/', views.add_content, name='add-content'),
     path('pay/', views.pay, name='pay'),
     path('token/', views.token, name='token'),
@@ -28,14 +21,14 @@ urlpatterns = [
     path('stk/', views.stk, name="stk"),
 
 
-    # Third Semester
-    path('decision-support-and-expert-systems/', views.dses, name='dses'),
-    path('human-computer-interaction/', views.hci, name='hci'),
-    path('cyber-law-and-ethics/', views.cyberLawAndEthics, name='cyber-law'),
-    path('biometrics-and-cyber-security/', views.biometricsAndCyberSecurity, name='biometrics'),
-    path('cloud-computing-and-emerging-technologies/', views.cloudComputing, name='cloud-computing'),
-    path('multimedia-systems-and-animation-technologies/', views.multimediaSystems, name='multimedia'),
-    path('data-science-and-machine-learning/', views.dataScienceAndMachineLearning, name='datascience'),
+   path('robotics/', views.course1, name='robotics'),
+    path('artificial-intelligence/', views.course2, name='artificial-intelligence'),
+    path('computer-graphics/', views.course3, name='computer-graphics'),
+    path('network-design/', views.course4, name='network-design'),
+    path('software-engineering/', views.course5, name='software-engineering'),
+    path('information-security/', views.course6, name='information-security'),
+    path('informatics-project-2/', views.course7, name='informatics-project-2'),
+    path('entreprenuership-and-employability/', views.course8, name='entreprenuership-and-employability'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

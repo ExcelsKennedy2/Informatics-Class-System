@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Operating Systems{% endblock %}
+{% block title %}Robotics and Intelligent Systems{% endblock %}
 
 {% block content %}
 
@@ -15,10 +15,10 @@
                 <div class="container">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
-                            <h1>Operating Systems II</h1>
-                            <p class="mb-0">Explore fundamental concepts such as process management, memory management, file systems, and input/output 
-                                operations. Gain insights into the design and implementation of various operating systems, including Windows, 
-                                Linux, and macOS.</p>
+                            <h1>Robotics and Intelligent Systems</h1>
+                            <p class="mb-0">
+                                Welcome to the fascinating world of Decision Support and Expert Systems! This course will equip you with the knowledge and skills to design, develop, and implement intelligent systems that aid in complex decision-making.  We'll explore the core concepts of artificial intelligence, knowledge representation, reasoning, and machine learning, applying them to real-world problems across diverse domains.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                 <div class="container">
                     <ol>
                         <li><a href="{% url 'index' %}">Home</a></li>
-                        <li class="current">Operating Systems II</li>
+                        <li class="current">Robotics and Intelligent Systems</li>
                     </ol>
                 </div>
             </nav>
@@ -40,8 +40,8 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <img src="{% static 'assets/img/course-1.jpg' %}" class="img-fluid" alt="operating-systems">
-                        <h3>Operating Systems</h3>
+                        <img src="{% static 'assets/img/dss.webp' %}" class="img-fluid" alt="Robotics and Intelligent Systems">
+                        <h3>Robotics and Intelligent Systems</h3>
                         <p>
                             To enhance your learning, variety of resources are provided including downloadable lecture
                             notes,
@@ -52,12 +52,12 @@
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Lecturer</h5>
-                            <p><a href="#">Dr. Steve Oloo</a></p>
+                            <p><a href="#">Mr. Calvin Kitaka</a></p>
                         </div>
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Course Code</h5>
-                            <p>INF 312</p>
+                            <p>INF 412</p>
                         </div>
 
                         <div class="course-info d-flex justify-content-between align-items-center">
@@ -67,7 +67,7 @@
 
                         <div class="course-info d-flex justify-content-between align-items-center">
                             <h5>Schedule</h5>
-                            <p>Wednesday <br>9.00 am - 11.00 am</p>
+                            <p>Tuesday <br>9.00 am - 11.00 am</p>
                         </div>
 
                     </div>
@@ -76,6 +76,7 @@
             </div>
 
         </section><!-- /Courses Course Details Section -->
+
 
         <!-- Tabs Section -->
         <section id="tabs" class="tabs section">
@@ -94,6 +95,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" data-bs-toggle="tab" href="#tab-3">CATs</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">WhatsApp Group Link</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+              </li> -->
                         </ul>
                     </div>
                     <div class="col-lg-9 mt-4 mt-lg-0">
@@ -110,6 +117,8 @@
                                                     <p>{{ note.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No notes sent</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -129,6 +138,8 @@
                                                     <p>{{ assignment.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No assignment given</i></p>
                                         {% endfor %}
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -148,8 +159,10 @@
                                                     <p>{{ cat.text|safe }}</p>
                                                 {% endif %}
                                             </div>
+                                            {% empty %}
+                                            <p><i>No Takeaway CAT given</i></p>
                                         {% endfor %}
-                                    </div>
+                                         </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
                                         <img src="{% static 'assets/img/tabs/tab-3.png' %}" alt="" class="img-fluid">
                                     </div>
@@ -158,9 +171,8 @@
                             <div class="tab-pane" id="tab-4">
                                 <div class="row">
                                     <div class="col-lg-8 details order-2 order-lg-1 list-group">
-                                        <!-- <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p> -->
+                                        <a href="https://chat.whatsapp.com/IEJkTTCYXomAc5QoHnOcBG" target="_blank"
+                                            class="list-group-item list-group-item-action">https://chat.whatsapp.com/IEJkTTCYXomAc5QoHnOcBG</a>
                                     </div>
                                     <div class="col-lg-4 text-center order-1 order-lg-2">
                                         <img src="{% static 'assets/img/tabs/tab-4.png' %}" alt="" class="img-fluid">
